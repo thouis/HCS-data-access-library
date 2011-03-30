@@ -1,0 +1,34 @@
+The goal of this project is to provide a multi-language and
+cross-platform set of libraries for accessing HCS data through a
+single interface, regardless of the backend used to store the data.
+
+The initial language targets are:
+- Python
+- Matlab
+- Java(?) (might be easiest path for Matlab)
+
+The initial backends to be supported are:
+- CellProfiler 1.0 .MAT files
+- CellProfiler 2.0 .MAT files (same as 1.0?)
+- CellProfiler 2.0 MySQL databases (v1)
+- CellProfiler 2.0 MySQL databases (v2)
+- CellProfiler 2.0 sqlite3 databases
+- GE INCell Analysis .XML files (code to convert these to CP2 sqlite
+  files is available in the CellProfiler Analyst source)
+- Whatever format iBrain2 uses
+- Possibly, a new HDF5-based format
+
+Goals:
+- common interface for all backends
+- concise code for all operations currently used in CPA and the
+  multiple CellClassifiers
+   - per-well and per-cell data (as well as per-image?)
+   - classify cells by CPA's GentleBoost, SVM, RF-LDA, others...
+   - select a random cell from an image/well/group/experiment
+   - select a random cell of some particular class
+   - fetch a feature's value for every cell in an
+     image/well/group/experiment
+   - score images, cells, wells
+
+   
+
