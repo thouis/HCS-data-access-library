@@ -32,3 +32,33 @@ Goals:
 
    
 
+--------------------------------------------------
+(older thoughts)
+
+Needs from CPA's point of view:
+      metadata, per-image, and per-object tables.
+      .properties file should be subsumed in metadata and some reasonable user defaults.
+      simple queries for:
+             per-object feature data.
+             per-feature data across all objects (possibly with well or image information).
+             per-image or per-well summaries.
+                       Fine for these to be generated on the fly, if fast and cached.
+             fetching of every cell's feature vector (with exclusions would be nice, but not necessary) for classification.
+                      ... with a possible function to be called on each cell, possibly.
+             unified objects such as nucleus/cell/cytoplasm as single object.
+             Eventually: virtual flow cytometry via polygon queries.
+       
+
+Questions:
+        How should data be written, both initially (by CP or another tool)?
+            format?  library support?
+        How are annotations, classifications, etc. written into data for future use?
+            should be through library.
+            should include provenance tracking.
+        Can we support data correction (plate layout, etc.) in a reasonable fashion?
+        Provenance tracking within file itself?
+            log messages, svn/git revision #s, actual code...
+        Languages supported - matlab, python, java, C
+        Formats - CP1.mat, CP2.mat (same?), HDF5, sqlite or mysql with CPA .properties file
+
+    
